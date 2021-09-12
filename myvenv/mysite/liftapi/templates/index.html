@@ -1,13 +1,16 @@
 <table class="table-contents" style="padding:10px">
-
     <tr>
-        <th> 이름 </th>
-        <th> 주소 </th>
+        <th> 이름</th>
+        <th> 주소</th>
+        <th> 상태</th>
     </tr>
-    {% for lift in lifts %}
-        <tr>
-            <td>{{lift}}</td>
-            <td>{{lift.lift_status}}</td>
-        </tr>
+
+    {% for lift in lifts.all%}
+    <h1> {{lift.lift_name}} </h1>
+    <p> {{lift.address}}</p>
+    <p> {{lift.lift_status}}</p>
+    <br><br>
     {%endfor%}
+
+
 </table>
