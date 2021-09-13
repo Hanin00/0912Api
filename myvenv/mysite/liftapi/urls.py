@@ -9,7 +9,7 @@ from rest_framework import routers
 app_name = 'lift'
 
 urlpatterns = [
-    path('list/', views.lift_view, name = 'index'),
+    path('', views.lift_view, name = 'index'),
     path('total/', views.lift_list),
     path('liftdetail/<int:pk>/', views.lift_detail),
 ]
